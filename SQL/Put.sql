@@ -1,0 +1,1 @@
+UPDATE users SET name = 'Jane Doe', age = 35 WHERE id = 1;
