@@ -1,0 +1,27 @@
+<body>
+    <h1>Records</h1>
+    <% if (records.length > 0) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <!-- Add more table headers if needed -->
+                </tr>
+            </thead>
+            <tbody>
+                <% records.forEach(record => { %>
+                    <tr>
+                        <td><%= record.id %></td>
+                        <td><%= record.name %></td>
+                        <td><%= record.email %></td>
+                        <!-- Add more table cells if needed -->
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p>No records found</p>
+    <% } %>
+</body>

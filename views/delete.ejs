@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Record</title>
+</head>
+<body>
+    <h1>Delete Record</h1>
+    <button onclick="deleteRecord('<%= record.id %>')">Delete Record</button>
+
+<script>
+  async function deleteRecord(id) {
+    try {
+      const response = await fetch(`/delete/${id}`, {
+        method: 'DELETE'
+      });
+      if (response.ok) {
+        // Record deleted successfully
+        console.log(`Record with ID ${id} deleted successfully`);
+      } else {
+        // Error deleting record
+        console.error('Error deleting record:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error deleting record:', error.message);
+    }
+  }
+</script>
+</body>
+</html>

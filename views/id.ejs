@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Record by ID</title>
+</head>
+<body>
+    <h1>Select Record by ID</h1>
+    <% if (record.length > 0) 
+                var login = record[0];{ %>
+                <h3><%= login.username %> <%= login.password %>
+                </h3> 
+            <% } %>
+    </form>
+</body>
+</html>
